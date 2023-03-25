@@ -18,12 +18,12 @@ package com.github.tomakehurst.wiremock.servlet;
 import static com.github.tomakehurst.wiremock.common.Exceptions.throwUnchecked;
 
 import com.github.tomakehurst.wiremock.http.*;
-import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.io.ByteStreams;
 import jakarta.servlet.http.Part;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.function.Function;
 
 public class WireMockHttpServletMultipartAdapter implements Request.Part {
 

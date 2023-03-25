@@ -29,8 +29,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.tomakehurst.wiremock.common.DateTimeUnit;
 import com.github.tomakehurst.wiremock.common.Json;
-import com.google.common.base.Optional;
-import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
@@ -38,7 +36,7 @@ import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.*;
-
+import java.util.function.Predicate;
 import org.xmlunit.diff.ComparisonType;
 
 public class StringValuePatternJsonDeserializer extends JsonDeserializer<StringValuePattern> {

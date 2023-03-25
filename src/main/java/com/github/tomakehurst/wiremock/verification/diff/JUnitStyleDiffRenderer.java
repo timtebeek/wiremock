@@ -17,9 +17,9 @@ package com.github.tomakehurst.wiremock.verification.diff;
 
 import static com.google.common.collect.FluentIterable.from;
 
-import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import java.util.List;
+import java.util.function.Function;
 
 public class JUnitStyleDiffRenderer {
 

@@ -49,7 +49,6 @@ import com.github.tomakehurst.wiremock.verification.notmatched.NotMatchedRendere
 import com.github.tomakehurst.wiremock.verification.notmatched.PlainTextStubNotMatchedRenderer;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 import com.google.common.collect.*;
 import com.google.common.io.Resources;
@@ -724,7 +723,7 @@ public class CommandLineOptions implements Options {
     if (specifiesMaxRequestJournalEntries()) {
       return Optional.of(Integer.parseInt((String) optionSet.valueOf(MAX_ENTRIES_REQUEST_JOURNAL)));
     }
-    return Optional.absent();
+    return Optional.empty();
   }
 
   @Override

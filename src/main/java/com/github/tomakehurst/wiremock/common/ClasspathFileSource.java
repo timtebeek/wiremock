@@ -22,8 +22,6 @@ import static com.google.common.collect.Lists.newArrayList;
 import static java.lang.Thread.currentThread;
 import static java.util.Arrays.asList;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Iterators;
 import com.google.common.io.Resources;
@@ -31,9 +29,12 @@ import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -149,7 +150,7 @@ public class ClasspathFileSource implements FileSource {
   public List<TextFile> listFilesRecursively() {
     if (isFileSystem()) {
       assertExistsAndIsDirectory();
-      List<File> fileList = newArrayList();
+      List<File> fileList = new ArrayList<>();
       recursivelyAddFilesToList(rootDirectory, fileList);
       return toTextFileList(fileList);
     }

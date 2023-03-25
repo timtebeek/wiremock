@@ -20,10 +20,10 @@ import static com.google.common.collect.FluentIterable.from;
 import static com.google.common.collect.Iterables.any;
 
 import com.github.tomakehurst.wiremock.matching.StringValuePattern;
-import com.google.common.base.Function;
 import com.google.common.base.Joiner;
-import com.google.common.base.Predicate;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class MultiValue {
 

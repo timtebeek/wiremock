@@ -19,9 +19,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.common.base.Objects;
-import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import java.lang.reflect.Constructor;
+import java.util.function.Predicate;
 
 @JsonDeserialize(using = StringValuePatternJsonDeserializer.class)
 public abstract class StringValuePattern extends ContentPattern<String> {
@@ -90,11 +90,11 @@ public abstract class StringValuePattern extends ContentPattern<String> {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     StringValuePattern that = (StringValuePattern) o;
-    return Objects.equal(expectedValue, that.expectedValue);
+    return Objects.equals(expectedValue, that.expectedValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hashCode(expectedValue);
+    return Objects.hash(expectedValue);
   }
 }

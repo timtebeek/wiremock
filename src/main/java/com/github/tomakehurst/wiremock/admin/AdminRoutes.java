@@ -25,11 +25,11 @@ import com.github.tomakehurst.wiremock.extension.AdminApiExtension;
 import com.github.tomakehurst.wiremock.http.RequestMethod;
 import com.github.tomakehurst.wiremock.store.Stores;
 import com.github.tomakehurst.wiremock.verification.notmatched.PlainTextStubNotMatchedRenderer;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableBiMap;
 import java.util.Collections;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class AdminRoutes {
 
@@ -136,14 +136,14 @@ public class AdminRoutes {
                 return entry.getKey().matches(method, path);
               }
             })
-        .transform(
+        .map(
             new Function<Map.Entry<RequestSpec, AdminTask>, AdminTask>() {
               @Override
               public AdminTask apply(Map.Entry<RequestSpec, AdminTask> input) {
                 return input.getValue();
               }
             })
-        .or(new NotFoundAdminTask());
+        .orElse(new NotFoundAdminTask());
   }
 
   public RequestSpec requestSpecForTask(final Class<? extends AdminTask> taskClass) {
@@ -156,7 +156,7 @@ public class AdminRoutes {
                     return input.getValue().getClass().equals(taskClass);
                   }
                 })
-            .transform(
+            .map(
                 new Function<Map.Entry<RequestSpec, AdminTask>, RequestSpec>() {
                   @Override
                   public RequestSpec apply(Map.Entry<RequestSpec, AdminTask> input) {

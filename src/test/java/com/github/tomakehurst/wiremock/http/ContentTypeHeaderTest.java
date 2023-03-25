@@ -22,8 +22,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.github.tomakehurst.wiremock.common.Strings;
 import com.github.tomakehurst.wiremock.testsupport.MockRequestBuilder;
-import com.google.common.base.Optional;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 import org.junit.jupiter.api.Test;
 
 public class ContentTypeHeaderTest {

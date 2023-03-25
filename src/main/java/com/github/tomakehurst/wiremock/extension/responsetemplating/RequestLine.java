@@ -22,10 +22,10 @@ import com.github.tomakehurst.wiremock.http.MultiValue;
 import com.github.tomakehurst.wiremock.http.QueryParameter;
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.RequestMethod;
-import com.google.common.base.Function;
 import com.google.common.collect.Maps;
 import java.net.URI;
 import java.util.Map;
+import java.util.function.Function;
 
 @Deprecated
 /** @deprecated Use the accessors on {@link RequestTemplateModel} */

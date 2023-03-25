@@ -15,7 +15,7 @@
  */
 package com.github.tomakehurst.wiremock.common;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 /**
  * Exposed Jetty tuning options. See:
@@ -141,13 +141,13 @@ public class JettySettings {
 
     public JettySettings build() {
       return new JettySettings(
-          Optional.fromNullable(acceptors),
-          Optional.fromNullable(acceptQueueSize),
-          Optional.fromNullable(requestHeaderSize),
-          Optional.fromNullable(responseHeaderSize),
-          Optional.fromNullable(stopTimeout),
-          Optional.fromNullable(idleTimeout),
-          Optional.fromNullable(shutdownIdleTimeout));
+          Optional.ofNullable(acceptors),
+          Optional.ofNullable(acceptQueueSize),
+          Optional.ofNullable(requestHeaderSize),
+          Optional.ofNullable(responseHeaderSize),
+          Optional.ofNullable(stopTimeout),
+          Optional.ofNullable(idleTimeout),
+          Optional.ofNullable(shutdownIdleTimeout));
     }
   }
 }

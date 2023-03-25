@@ -22,10 +22,10 @@ import static com.google.common.base.Preconditions.checkArgument;
 
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
-import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import java.util.Date;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class LimitAndSinceDatePaginator implements Paginator<ServeEvent> {
 

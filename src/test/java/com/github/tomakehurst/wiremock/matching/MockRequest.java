@@ -20,7 +20,6 @@ import static com.github.tomakehurst.wiremock.http.HttpHeader.httpHeader;
 import static com.google.common.base.Charsets.UTF_8;
 import static com.google.common.collect.FluentIterable.from;
 import static com.google.common.collect.Iterables.tryFind;
-import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
 import static java.util.Arrays.asList;
 
@@ -29,12 +28,13 @@ import com.github.tomakehurst.wiremock.common.url.PathParams;
 import com.github.tomakehurst.wiremock.http.*;
 import com.github.tomakehurst.wiremock.jetty11.MultipartParser;
 import com.github.tomakehurst.wiremock.verification.LoggedRequest;
-import com.google.common.base.Optional;
-import com.google.common.base.Predicate;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 
 public class MockRequest implements Request {
 
@@ -114,7 +114,7 @@ public class MockRequest implements Request {
 
   public MockRequest part(MockMultipart part) {
     if (multiparts == null) {
-      multiparts = newArrayList();
+      multiparts = new ArrayList<>();
     }
 
     multiparts.add(part);
@@ -180,7 +180,7 @@ public class MockRequest implements Request {
                 return input.keyEquals(key);
               }
             })
-        .or(HttpHeader.absent(key));
+        .orElse(HttpHeader.absent(key));
   }
 
   @Override
@@ -236,7 +236,7 @@ public class MockRequest implements Request {
 
   @Override
   public Optional<Request> getOriginalRequest() {
-    return Optional.absent();
+    return Optional.empty();
   }
 
   @Override

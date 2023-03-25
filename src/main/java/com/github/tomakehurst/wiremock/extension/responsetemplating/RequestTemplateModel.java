@@ -20,10 +20,10 @@ import com.github.tomakehurst.wiremock.common.url.PathTemplate;
 import com.github.tomakehurst.wiremock.http.Cookie;
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.RequestMethod;
-import com.google.common.base.Function;
 import com.google.common.collect.Maps;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.function.Function;
 
 public class RequestTemplateModel {
 

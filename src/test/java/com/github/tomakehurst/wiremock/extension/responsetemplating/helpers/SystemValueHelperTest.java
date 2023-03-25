@@ -22,8 +22,8 @@ import com.github.tomakehurst.wiremock.common.ConsoleNotifier;
 import com.github.tomakehurst.wiremock.common.LocalNotifier;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.SystemKeyAuthoriser;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
+import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +33,7 @@ public class SystemValueHelperTest {
 
   @BeforeEach
   public void init() {
-    helper = new SystemValueHelper(new SystemKeyAuthoriser(ImmutableSet.of(".*")));
+    helper = new SystemValueHelper(new SystemKeyAuthoriser(Set.of(".*")));
     LocalNotifier.set(new ConsoleNotifier(true));
   }
 
@@ -62,7 +62,7 @@ public class SystemValueHelperTest {
 
   @Test
   public void getForbiddenEnvironmentVariableShouldReturnError() throws Exception {
-    helper = new SystemValueHelper(new SystemKeyAuthoriser(ImmutableSet.of("JAVA*")));
+    helper = new SystemValueHelper(new SystemKeyAuthoriser(Set.of("JAVA*")));
 
     ImmutableMap<String, Object> optionsHash =
         ImmutableMap.<String, Object>of(
@@ -84,7 +84,7 @@ public class SystemValueHelperTest {
 
   @Test
   public void getAllowedPropertyShouldSuccess() throws Exception {
-    helper = new SystemValueHelper(new SystemKeyAuthoriser(ImmutableSet.of("test.*")));
+    helper = new SystemValueHelper(new SystemKeyAuthoriser(Set.of("test.*")));
     System.setProperty("test.key", "aaa");
     assertEquals("aaa", System.getProperty("test.key"));
     ImmutableMap<String, Object> optionsHash =
@@ -97,7 +97,7 @@ public class SystemValueHelperTest {
 
   @Test
   public void getForbiddenPropertyShouldReturnError() throws Exception {
-    helper = new SystemValueHelper(new SystemKeyAuthoriser(ImmutableSet.of("JAVA.*")));
+    helper = new SystemValueHelper(new SystemKeyAuthoriser(Set.of("JAVA.*")));
     System.setProperty("test.key", "aaa");
     ImmutableMap<String, Object> optionsHash =
         ImmutableMap.<String, Object>of(

@@ -20,10 +20,10 @@ import static com.google.common.collect.FluentIterable.from;
 
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.servlet.WireMockHttpServletMultipartAdapter;
-import com.google.common.base.Function;
 import jakarta.servlet.http.Part;
 import java.io.ByteArrayInputStream;
 import java.util.Collection;
+import java.util.function.Function;
 import org.eclipse.jetty.server.MultiPartInputStreamParser;
 
 public class MultipartParser {

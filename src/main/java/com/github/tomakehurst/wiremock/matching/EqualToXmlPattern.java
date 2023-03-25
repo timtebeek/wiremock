@@ -38,20 +38,7 @@ import org.xmlunit.placeholder.PlaceholderDifferenceEvaluator;
 public class EqualToXmlPattern extends StringValuePattern {
 
   private static Set<ComparisonType> COUNTED_COMPARISONS =
-      ImmutableSet.of(
-          ELEMENT_TAG_NAME,
-          SCHEMA_LOCATION,
-          NO_NAMESPACE_SCHEMA_LOCATION,
-          NODE_TYPE,
-          NAMESPACE_URI,
-          TEXT_VALUE,
-          PROCESSING_INSTRUCTION_TARGET,
-          PROCESSING_INSTRUCTION_DATA,
-          ELEMENT_NUM_ATTRIBUTES,
-          ATTR_VALUE,
-          CHILD_NODELIST_LENGTH,
-          CHILD_LOOKUP,
-          ATTR_NAME_LOOKUP);
+      Set.of(ELEMENT_TAG_NAME, SCHEMA_LOCATION, NO_NAMESPACE_SCHEMA_LOCATION, NODE_TYPE, NAMESPACE_URI, TEXT_VALUE, PROCESSING_INSTRUCTION_TARGET, PROCESSING_INSTRUCTION_DATA, ELEMENT_NUM_ATTRIBUTES, ATTR_VALUE, CHILD_NODELIST_LENGTH, CHILD_LOOKUP, ATTR_NAME_LOOKUP);
 
   private final Boolean enablePlaceholders;
   private final String placeholderOpeningDelimiterRegex;

@@ -18,8 +18,8 @@ package com.github.tomakehurst.wiremock.verification;
 import com.github.tomakehurst.wiremock.matching.RequestPattern;
 import com.github.tomakehurst.wiremock.matching.StringValuePattern;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
-import com.google.common.base.Optional;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public class DisabledRequestJournal implements RequestJournal {

@@ -21,8 +21,8 @@ import com.github.tomakehurst.wiremock.extension.StubMappingTransformer;
 import com.github.tomakehurst.wiremock.store.BlobStore;
 import com.github.tomakehurst.wiremock.store.files.BlobStoreFileSource;
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
-import com.google.common.base.Function;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Applies all registered StubMappingTransformer extensions against a stub mapping when applicable,

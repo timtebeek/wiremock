@@ -18,11 +18,11 @@ package com.github.tomakehurst.wiremock.recording;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
-import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Function;
 
 @JsonDeserialize(using = SnapshotRecordResultDeserialiser.class)
 public class SnapshotRecordResult {

@@ -19,8 +19,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.matching.*;
-import com.google.common.base.Function;
 import java.util.Map;
+import java.util.function.Function;
 
 /**
  * Creates a RequestPatternBuilder from a Request's URL, method, body (if present), and optionally

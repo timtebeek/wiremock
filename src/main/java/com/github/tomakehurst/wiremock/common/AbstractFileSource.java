@@ -20,15 +20,16 @@ import static com.google.common.collect.Iterables.transform;
 import static com.google.common.collect.Lists.newArrayList;
 
 import com.github.tomakehurst.wiremock.security.NotAuthorisedException;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.io.Files;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public abstract class AbstractFileSource implements FileSource {
 
@@ -75,7 +76,7 @@ public abstract class AbstractFileSource implements FileSource {
   @Override
   public List<TextFile> listFilesRecursively() {
     assertExistsAndIsDirectory();
-    List<File> fileList = newArrayList();
+    List<File> fileList = new ArrayList<>();
     recursivelyAddFilesToList(rootDirectory, fileList);
     return toTextFileList(fileList);
   }

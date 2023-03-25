@@ -22,10 +22,10 @@ import com.github.tomakehurst.wiremock.matching.MatchResult;
 import com.github.tomakehurst.wiremock.matching.MemoizingMatchResult;
 import com.github.tomakehurst.wiremock.matching.RequestPattern;
 import com.github.tomakehurst.wiremock.stubbing.*;
-import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 public class NearMissCalculator {
 

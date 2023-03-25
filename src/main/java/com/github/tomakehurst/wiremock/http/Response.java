@@ -21,10 +21,10 @@ import static java.net.HttpURLConnection.HTTP_NOT_FOUND;
 import static java.net.HttpURLConnection.HTTP_OK;
 
 import com.github.tomakehurst.wiremock.common.*;
-import com.google.common.base.Optional;
 import com.google.common.io.ByteStreams;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Optional;
 
 public class Response {
 
@@ -258,7 +258,7 @@ public class Response {
         Integer fixedDelay, Integer globalFixedDelay) {
       Integer delay = fixedDelay != null ? fixedDelay : globalFixedDelay;
 
-      return Optional.fromNullable(delay);
+      return Optional.ofNullable(delay);
     }
 
     private void addRandomDelayIfSpecifiedGloballyOrIn(

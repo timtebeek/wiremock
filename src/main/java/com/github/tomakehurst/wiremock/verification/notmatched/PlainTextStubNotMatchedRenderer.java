@@ -37,7 +37,7 @@ public class PlainTextStubNotMatchedRenderer extends NotMatchedRenderer {
   @Override
   public ResponseDefinition render(Admin admin, Request request) {
     LoggedRequest loggedRequest =
-        LoggedRequest.createFrom(request.getOriginalRequest().or(request));
+        LoggedRequest.createFrom(request.getOriginalRequest().orElse(request));
     List<NearMiss> nearMisses = admin.findTopNearMissesFor(loggedRequest).getNearMisses();
 
     Map<String, RequestMatcherExtension> customMatcherExtensions =

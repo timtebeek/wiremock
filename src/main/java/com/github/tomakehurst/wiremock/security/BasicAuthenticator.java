@@ -20,9 +20,9 @@ import static java.util.Arrays.asList;
 
 import com.github.tomakehurst.wiremock.client.BasicCredentials;
 import com.github.tomakehurst.wiremock.http.Request;
-import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import java.util.List;
+import java.util.function.Function;
 
 public class BasicAuthenticator implements Authenticator {
 

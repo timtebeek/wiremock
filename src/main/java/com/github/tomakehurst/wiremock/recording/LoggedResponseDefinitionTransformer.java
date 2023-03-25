@@ -23,11 +23,10 @@ import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 import com.github.tomakehurst.wiremock.common.Gzip;
 import com.github.tomakehurst.wiremock.common.Strings;
 import com.github.tomakehurst.wiremock.http.*;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.collect.ImmutableList;
 import java.nio.charset.Charset;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 /**
  * Transforms a LoggedResponse into a ResponseDefinition, which will be used to construct a
@@ -37,10 +36,7 @@ public class LoggedResponseDefinitionTransformer
     implements Function<LoggedResponse, ResponseDefinition> {
 
   private static final List<CaseInsensitiveKey> EXCLUDED_HEADERS =
-      ImmutableList.of(
-          CaseInsensitiveKey.from(CONTENT_ENCODING),
-          CaseInsensitiveKey.from(CONTENT_LENGTH),
-          CaseInsensitiveKey.from(TRANSFER_ENCODING));
+      List.of(CaseInsensitiveKey.from(CONTENT_ENCODING), CaseInsensitiveKey.from(CONTENT_LENGTH), CaseInsensitiveKey.from(TRANSFER_ENCODING));
 
   @Override
   public ResponseDefinition apply(LoggedResponse response) {

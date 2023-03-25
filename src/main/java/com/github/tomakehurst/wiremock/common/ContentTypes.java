@@ -24,11 +24,11 @@ import static org.apache.commons.lang3.StringUtils.substringAfterLast;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.tomakehurst.wiremock.common.xml.Xml;
 import com.github.tomakehurst.wiremock.http.ContentTypeHeader;
-import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableMap;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 
 public class ContentTypes {
 

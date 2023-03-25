@@ -23,9 +23,9 @@ import static org.hamcrest.Matchers.*;
 
 import com.github.tomakehurst.wiremock.http.*;
 import com.github.tomakehurst.wiremock.matching.MockRequest;
-import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import java.util.List;
+import java.util.function.Function;
 import org.junit.jupiter.api.Test;
 
 public class RequestWrapperTest {

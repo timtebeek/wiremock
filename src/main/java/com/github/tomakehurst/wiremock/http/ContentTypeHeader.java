@@ -16,8 +16,8 @@
 package com.github.tomakehurst.wiremock.http;
 
 import com.github.tomakehurst.wiremock.common.Strings;
-import com.google.common.base.Optional;
 import java.nio.charset.Charset;
+import java.util.Optional;
 
 public class ContentTypeHeader extends HttpHeader {
 
@@ -53,7 +53,7 @@ public class ContentTypeHeader extends HttpHeader {
       }
     }
 
-    return Optional.absent();
+    return Optional.empty();
   }
 
   public Charset charset() {

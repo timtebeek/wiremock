@@ -26,7 +26,6 @@ import com.github.tomakehurst.wiremock.matching.StringValuePattern;
 import com.github.tomakehurst.wiremock.store.RequestJournalStore;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import java.util.*;
 import java.util.function.Predicate;

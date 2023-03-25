@@ -19,9 +19,9 @@ import static com.google.common.collect.Lists.transform;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import java.util.List;
+import java.util.function.Function;
 import java.util.regex.PatternSyntaxException;
 
 public class JsonException extends InvalidInputException {

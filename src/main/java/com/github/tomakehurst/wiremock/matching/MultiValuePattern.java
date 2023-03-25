@@ -22,11 +22,11 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.http.MultiValue;
-import com.google.common.base.Function;
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 public class MultiValuePattern implements NamedValueMatcher<MultiValue> {
 
@@ -91,11 +91,11 @@ public class MultiValuePattern implements NamedValueMatcher<MultiValue> {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     MultiValuePattern that = (MultiValuePattern) o;
-    return Objects.equal(valuePattern, that.valuePattern);
+    return Objects.equals(valuePattern, that.valuePattern);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hashCode(valuePattern);
+    return Objects.hash(valuePattern);
   }
 }

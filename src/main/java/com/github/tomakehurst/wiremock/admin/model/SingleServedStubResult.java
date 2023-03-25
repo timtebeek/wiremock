@@ -17,7 +17,7 @@ package com.github.tomakehurst.wiremock.admin.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public class SingleServedStubResult extends SingleItemResult<ServeEvent> {
 

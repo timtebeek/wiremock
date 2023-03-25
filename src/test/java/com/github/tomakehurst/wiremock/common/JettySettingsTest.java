@@ -17,7 +17,7 @@ package com.github.tomakehurst.wiremock.common;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 import org.junit.jupiter.api.Test;
 
 public class JettySettingsTest {

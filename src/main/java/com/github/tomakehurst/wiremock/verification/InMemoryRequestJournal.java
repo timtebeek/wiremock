@@ -17,8 +17,8 @@ package com.github.tomakehurst.wiremock.verification;
 
 import com.github.tomakehurst.wiremock.matching.RequestMatcherExtension;
 import com.github.tomakehurst.wiremock.store.InMemoryRequestJournalStore;
-import com.google.common.base.Optional;
 import java.util.Map;
+import java.util.Optional;
 
 public class InMemoryRequestJournal extends StoreBackedRequestJournal {
 

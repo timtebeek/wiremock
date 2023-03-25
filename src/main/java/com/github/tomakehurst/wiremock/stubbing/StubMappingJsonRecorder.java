@@ -29,10 +29,10 @@ import com.github.tomakehurst.wiremock.http.*;
 import com.github.tomakehurst.wiremock.matching.*;
 import com.github.tomakehurst.wiremock.store.BlobStore;
 import com.github.tomakehurst.wiremock.verification.VerificationResult;
-import com.google.common.base.Predicate;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 
 public class StubMappingJsonRecorder implements RequestListener {
 

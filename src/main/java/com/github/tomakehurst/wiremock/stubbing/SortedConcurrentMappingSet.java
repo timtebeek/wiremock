@@ -17,11 +17,11 @@ package com.github.tomakehurst.wiremock.stubbing;
 
 import static com.google.common.collect.Iterables.removeIf;
 
-import com.google.common.base.Predicate;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class SortedConcurrentMappingSet implements Iterable<StubMapping> {

@@ -18,9 +18,9 @@ package com.github.tomakehurst.wiremock.recording;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.github.tomakehurst.wiremock.matching.RequestPattern;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
-import com.google.common.base.Predicate;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 
 /** A predicate to filter proxied ServeEvents against RequestPattern filters and IDs */
 public class ProxiedServeEventFilters implements Predicate<ServeEvent> {

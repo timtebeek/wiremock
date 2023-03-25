@@ -19,10 +19,10 @@ import static com.github.tomakehurst.wiremock.common.Exceptions.throwUnchecked;
 import static com.google.common.collect.FluentIterable.from;
 import static java.util.Arrays.asList;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class ExtensionLoader {
 

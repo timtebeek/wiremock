@@ -37,10 +37,10 @@ import com.github.tomakehurst.wiremock.http.Cookie;
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.RequestMethod;
 import com.github.tomakehurst.wiremock.stubbing.ServeEvent;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableMap;
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import org.apache.commons.lang3.StringUtils;
 
 public class RequestPattern implements NamedValueMatcher<Request> {

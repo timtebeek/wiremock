@@ -21,10 +21,10 @@ import static java.util.Arrays.asList;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public abstract class MatchResult implements Comparable<MatchResult> {
 
